@@ -1,14 +1,25 @@
 def admin_login(username, password)
   # your code here
-  if username == "admin" || username == "Admin" && password == "12345" 
-  return "Access Granted"
+  if (username == "admin" || username == "ADMIN") && password == "12345" 
+  return "Access granted"
   else 
-  return "Access Denied!"
+  return "Access denied"
   end  
 end
 
 def hows_the_weather(temperature)
   # your code here
+ resp = if temperature < 40
+  return "brisk"
+  elsif temperature >= 40 && temperature <= 65
+  return "a little chilly"
+  elsif temperature > 85
+  return "too dang hot"
+  else
+  return "perfect"
+  end
+
+  return "It's #{resp} out there!"
 end
 
 def fizzbuzz(num)
@@ -27,4 +38,3 @@ def calculator(operation, num1, num2)
   
   calculation
 end
-
